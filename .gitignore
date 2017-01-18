@@ -119,6 +119,10 @@ ENV/
 # IntelliJ
 /out/
 
+# intellij stuff von Robert ignored
+.idea/
+matemate.iml
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
