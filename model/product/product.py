@@ -10,7 +10,5 @@ class Product(db.Model):
     price = db.Column(db.Numeric, nullable=False)
     is_sale_prohibited = db.Column(db.Boolean, nullable=False)
     is_default_redemption = db.Column(db.Boolean, nullable=False)
-    # TODO ForeignKey destination is a View, there is maybe no Table, pls check when implementing Taxes
-    # tax_category_id = db.Column(db.Integer, ForeignKey("tax_category.tax_category_id"), nullable=False)
-    tax_category_id = db.Column(db.BIGINT, nullable=False)
+    tax_category_id = db.Column(db.Integer, ForeignKey("tax_category_name.tax_category_id"), nullable=False)
     product_category_id = db.Column(db.Integer, ForeignKey("product_category.product_category_id"))
